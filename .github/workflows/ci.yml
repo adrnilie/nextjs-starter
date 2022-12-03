@@ -69,8 +69,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      - name: Build with Next.js
+      - name: Run tests
         run: ${{ steps.detect-package-manager.outputs.manager }} run test
 
-      - name: Build with Next.js
+      - name: Build app
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
